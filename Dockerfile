@@ -27,7 +27,7 @@ RUN rm -rf /etc/nginx/conf.d/default.conf
 COPY ./docker/nginx/default.conf /etc/nginx/conf.d/default.conf
 
 # Copy over the build created in the Step 1
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/.next /usr/share/nginx/html
 
 # Set the working directory
 WORKDIR /usr/share/nginx/html
