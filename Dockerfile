@@ -10,7 +10,7 @@ WORKDIR /app
 
 # Copy package.json and install app dependencies
 COPY package.json .
-RUN npm install --force
+RUN npm install
 
 # Copy other project files and build
 COPY . ./
