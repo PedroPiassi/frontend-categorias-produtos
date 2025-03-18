@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+    # image project
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        restart: unless-stopped
+        ports: 
+            - "8081:80" 
+
